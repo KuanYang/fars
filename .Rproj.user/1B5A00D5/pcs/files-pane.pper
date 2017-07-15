@@ -1,0 +1,9 @@
+{
+    "path" : "~/kaggle/fars",
+    "sortOrder" : [
+        {
+            "ascending" : true,
+            "columnIndex" : 2
+        }
+    ]
+}

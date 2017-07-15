@@ -1,0 +1,15 @@
+Package: fars
+Type: Package
+Title: Final project for build a R package on Coursera
+Version: 0.1.0
+Author: Kuan Yang
+Maintainer: Kuan<101Kuan101@gmail.com>
+Description: reads some accident files
+    This package is for the sole purpose of Build a R package course.
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+Suggests: knitr,
+    rmarkdown,
+    testthat
+VignetteBuilder: knitr

@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "Package: fars\nType: Package\nTitle: Final project for build a R package on Coursera\nVersion: 0.1.0\nAuthor: Kuan Yang\nMaintainer: Kuan<101Kuan101@gmail.com>\nDescription: reads some accident files\n    This package is for the sole purpose of Build a R package course.\nLicense: GPL-3\nEncoding: UTF-8\nLazyData: true\nSuggests: knitr,\n    rmarkdown,\n    testthat\nVignetteBuilder: knitr\n",
+    "created" : 1500152720993.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3344022951",
+    "id" : "FCDACB9F",
+    "lastKnownWriteTime" : 1500157279,
+    "last_content_update" : 1500157279,
+    "path" : "~/kaggle/fars/DESCRIPTION",
+    "project_path" : "DESCRIPTION",
+    "properties" : {
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "dcf"
+}
