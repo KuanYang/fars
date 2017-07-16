@@ -29,7 +29,7 @@ fars_read <- function(filename) {
 #'
 #' @return A character string that is the file name for the data file for a specific year. The function will halt if the argument is not an integer or a character string that can be converted sucessfully to an integer.
 #'
-#' @example
+#' @examples
 #' \dontrun{
 #' make_filename(2013)
 #' make_filename(year=2013)
@@ -41,13 +41,13 @@ make_filename <- function(year) {
         sprintf("%s/accident_%d.csv.bz2", system.file("extdata", package="fars"), year)
 }
 
-#' This is a function that reads a lists of data input files with an argument specifying the \code{years} to read. It uses \code{\link{make_filename(year)}} function internally.
+#' This is a function that reads a lists of data input files with an argument specifying the \code{years} to read. It uses \code{\link{make_filename}} function internally.
 #'
 #' @param years A vector of years in integer format to read. It might stop if the argument is not in integer format.
 #'
 #' @return A list of data.frames (tibble), in which each element contains data for a year.
 #'
-#' @example
+#' @examples
 #' \dontrun{
 #' years = seq(2013, 2015)
 #' fars_read_years(years)
@@ -71,13 +71,13 @@ fars_read_years <- function(years) {
         })
 }
 
-#' This is a function that generates a monthly sum for each year for the data. It uses \code{\link{fars_read_years(years)}} function internally.
+#' This is a function that generates a monthly sum for each year for the data. It uses \code{\link{fars_read_years}} function internally.
 #'
 #' @param years A vector of years in integer format to read. It might stop if the argument is not in integer format.
 #'
 #' @return A data.frame(tibble) with monthly total for each year.
 #'
-#' @example
+#' @examples
 #' \dontrun{
 #' years = seq(2013, 2015)
 #' fars_summarize_years(years)
@@ -95,14 +95,14 @@ fars_summarize_years <- function(years) {
                 tidyr::spread(year, n)
 }
 
-#' This is a function that generates a state map showing the locations of all accidents for a specific year. It uses \code{\link{make_filename(year)}}, \code{\link{fars_read(filename)}}.
+#' This is a function that generates a state map showing the locations of all accidents for a specific year. It uses \code{\link{make_filename}}, \code{\link{fars_read}}.
 #'
 #' @param state.num The state number to generate the map for. It has to be an integer or a character string that can be converted into an integer, otherwise an error will be thrown and the function will halt. It must be present in the data files too, otherwise the function will stop and print an error message.
 #' @param year An integer or character string that can be converted into an integer.
 #'
 #' @return A state map showing the locations for all accidents for a specific state.
 #'
-#' @example
+#' @examples
 #' \dontrun{
 #' year = 2015
 #' fars_map_state(1, 2015)
